@@ -6,19 +6,28 @@
 
 Созданы юнит-тесты, покрывающие классы `Bun`, `Burger`, `Ingredient`, `Database`
 
-Процент покрытия 100% (отчет: `htmlcov/index.html`)
+Процент покрытия классов 100% (отчет: `htmlcov/index.html`)
 
 ### Структура проекта
 
-- `praktikum` - пакет, содержащий код программы
-- `tests` - пакет, содержащий тесты, разделенные по классам. Например, `bun_test.py`, `burger_test.py` и т.д.
+praktikum — пакет, содержащий код программы
+tests — тесты
+каталог allure_results хранит JSON-файлы с результатами
+htmlcov — оценка тестового покрытия
+conftest фикстуры, необходимые для запуска тестов
+data хранит предопределенные тестовые данные
+requirements.txt внешние зависимости исполняемых тестов
 
 ### Запуск автотестов
 
 **Установка зависимостей**
 
-> `$ pip install -r requirements.txt`
+>  `$ pip install -r requirements.txt`
 
 **Запуск автотестов и создание HTML-отчета о покрытии**
 
 >  `$ pytest --cov=praktikum --cov-report=html`
+
+**Allure-отчет о тестировании в формате веб-страницы**
+
+   `$ allure serve allure_results`
